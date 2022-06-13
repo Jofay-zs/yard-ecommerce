@@ -16,7 +16,8 @@ import ResponsiveNavbar from "./ResponsiveNavbar";
 
 const Header = () => {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
-  const [isAccountNavbarOpen, setIsAccountNavbarOpen] = useState(false);
+  const { isAccountNavbarOpen, setIsAccountNavbarOpen } =
+    useContext(AppContext);
   const { toggleOrders, setToggleOrders } = useContext(AppContext);
   const { state } = useContext(AppContext);
 
@@ -31,13 +32,13 @@ const Header = () => {
         />
       </button>
 
-      <section className="navbar-header">
+      <Link to="/" className="navbar-header">
         <img src={navbarLogo} alt="YARD-Sale" className="navbar-header-logo" />
         <div className="navbar-header-title">
           <span>YARD </span>
           <span> Sale</span>
         </div>
-      </section>
+      </Link>
 
       <section className="navbar-list">
         <ul>
@@ -66,7 +67,10 @@ const Header = () => {
         <ul>
           <li className="navbar-email">
             <button
-              onClick={() => setIsAccountNavbarOpen(!isAccountNavbarOpen)}
+              onClick={() => {
+                setToggleOrders(false)
+                setIsAccountNavbarOpen(!isAccountNavbarOpen);
+              }}
               className="navbar-email-button"
             >
               jofayzs19@gmail.com
@@ -78,6 +82,7 @@ const Header = () => {
           <li
             className="navbar-shopping-cart"
             onClick={() => {
+              setIsAccountNavbarOpen(false);
               setToggleOrders(!toggleOrders);
             }}
           >
