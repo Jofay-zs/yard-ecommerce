@@ -28,26 +28,33 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 12px;
-}
 
-.product-info figure {
-    margin: 0;
-    background-color: var(--hospital-green);
-    padding: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
-    width: 1.5em;
-    height: 1.5em;
+    figure {
+        margin: 0;
+        background-color: var(--hospital-green);
+        padding: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        width: 1.5em;
+        height: 1.5em;
 
-    .prduct-item-cart {
-        font-size: 1.3em;
-        color: var(--white);
+        .product-item-cart {
+            font-size: 1.3em;
+            color: var(--white);
+        }
+    }
+
+    .selected {
+        background-color: var(--white);
+
+        .product-item-cart {
+            color: var(--hospital-green);
+        }
     }
 }
-
 
 .product-info div p:nth-child(1) {
     font-weight: bold;
