@@ -31,13 +31,13 @@ const Header = () => {
         />
       </button>
 
-      <section className="navbar-header">
+      <Link to="/" className="navbar-header">
         <img src={navbarLogo} alt="YARD-Sale" className="navbar-header-logo" />
         <div className="navbar-header-title">
           <span>YARD </span>
           <span> Sale</span>
         </div>
-      </section>
+      </Link>
 
       <section className="navbar-list">
         <ul>
