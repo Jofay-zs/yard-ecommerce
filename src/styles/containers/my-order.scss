@@ -1,0 +1,95 @@
+@import '../vars';
+
+.my-order {
+    display: block;
+    width: 360px;
+    padding: 24px;
+    box-sizing: border-box;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    top: 68px;
+    border-radius: 0 0 6px 6px;
+    border: 1px solid var(--very-light-gray);
+
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: var(--very-light-gray);
+        border-radius: 10px;
+        height: auto;
+
+        &:hover {
+            background: var(--hospital-green);
+        }
+    }
+
+    &-content-list {
+        overflow-y: auto;
+        max-height: 17em;
+        padding-right: 1em;
+
+
+    }
+}
+
+.title-container {
+    display: flex;
+}
+
+.title-container img {
+    transform: rotate(180deg);
+    margin-right: 14px;
+}
+
+.title {
+    font-size: var(--lg);
+    font-weight: bold;
+}
+
+.order {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 16px;
+    align-items: center;
+    background-color: var(--text-input-field);
+    margin-bottom: 24px;
+    border-radius: 8px;
+    padding: 0 24px;
+}
+
+.order p:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+}
+
+.order p span:nth-child(1) {
+    font-size: var(--md);
+    font-weight: bold;
+}
+
+.order p:nth-child(2) {
+    text-align: end;
+    font-weight: bold;
+}
+
+.primary-button {
+    background-color: var(--hospital-green);
+    border-radius: 8px;
+    border: none;
+    color: var(--white);
+    width: 100%;
+    cursor: pointer;
+    font-size: var(--md);
+    font-weight: bold;
+    height: 50px;
+}
+
+@media (max-width: 640px) {
+    .my-order {
+        width: 100%;
+        display: block;
+    }
+}

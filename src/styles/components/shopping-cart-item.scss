@@ -1,0 +1,29 @@
+@import '../cars';
+
+.shopping-cart-item {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    gap: 16px;
+    margin-bottom: 24px;
+    align-items: center;
+}
+
+.shopping-cart-item figure {
+    margin: 0;
+}
+
+.shopping-cart-item figure img {
+    width: 70px;
+    height: 70px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.shopping-cart-item p:nth-child(2) {
+    color: var(--very-light-gray);
+}
+
+.shopping-cart-item p:nth-child(3) {
+    font-size: var(--md);
+    font-weight: bold;
+}
