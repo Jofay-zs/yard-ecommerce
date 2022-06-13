@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import OrderItem from "../components/OrderItem";
 import "../styles/containers/my-order.scss";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
@@ -43,7 +44,9 @@ const MyOrder = () => {
           </p>
           <p>${calculateTotalOrders()}</p>
         </div>
-        <button className="primary-button">Checkout</button>
+        <div className="primary-button">
+          <Link to="checkout">Checkout</Link>
+        </div>
       </div>
     </aside>
   );
