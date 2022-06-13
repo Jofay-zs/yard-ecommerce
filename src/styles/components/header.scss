@@ -1,0 +1,128 @@
+@import '../vars';
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    border-bottom: 1px solid var(--very-light-gray);
+    position: sticky;
+    top: 0;
+    background: white;
+    min-height: 4.25em;
+}
+
+.navbar-button {
+    display: none;
+    font-size: 1.7em;
+    background-color: transparent;
+    border: none;
+}
+
+.navbar-header {
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+
+
+    .navbar-header-logo {
+        width: 3em;
+        margin-right: 10px;
+    }
+
+    .navbar-header-title {
+        font-weight: bold;
+
+        :first-child {
+            color: var(--hospital-green);
+        }
+    }
+}
+
+.navbar-list,
+.navbar-right {
+    display: flex;
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        height: 60px;
+    }
+}
+
+.navbar-list li a {
+    text-decoration: none;
+    color: var(--black);
+    border: 1px solid var(--white);
+    padding: 8px;
+    border-radius: 8px;
+
+    &:hover {
+        border: 1px solid var(--hospital-green);
+        color: var(--hospital-green);
+    }
+}
+
+.navbar-list ul {
+    margin-left: 12px;
+}
+
+
+.navbar-email {
+    margin-right: 12px;
+    position: relative;
+
+    .navbar-email-button {
+        background-color: transparent;
+        border: none;
+        color: var(--very-light-gray);
+        font-size: var(--sm);
+
+        &:hover {
+            color: var(--hospital-green);
+        }
+    }
+}
+
+.navbar-shopping-cart {
+    position: relative;
+    font-size: 1.7em;
+
+    & div {
+        width: 16px;
+        height: 16px;
+        background-color: var(--hospital-green);
+        border-radius: 50%;
+        font-size: var(--sm);
+        font-weight: bold;
+        position: absolute;
+        top: -6px;
+        right: -3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 800px) {
+    .navbar-button {
+        display: block;
+    }
+
+    .navbar-header {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar-list {
+        display: none;
+    }
+
+    .navbar-email {
+        display: none;
+    }
+}
