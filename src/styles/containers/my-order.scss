@@ -33,6 +33,27 @@
 
 
     }
+
+    &-content {
+        .primary-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--hospital-green);
+            border-radius: 8px;
+            border: none;
+            width: 100%;
+            cursor: pointer;
+            height: 50px;
+
+            a {
+                text-decoration: none;
+                color: var(--white);
+                font-size: var(--md);
+                font-weight: bold;
+            }
+        }
+    }
 }
 
 .title-container {
@@ -75,17 +96,7 @@
     font-weight: bold;
 }
 
-.primary-button {
-    background-color: var(--hospital-green);
-    border-radius: 8px;
-    border: none;
-    color: var(--white);
-    width: 100%;
-    cursor: pointer;
-    font-size: var(--md);
-    font-weight: bold;
-    height: 50px;
-}
+
 
 @media (max-width: 640px) {
     .my-order {

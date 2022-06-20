@@ -10,10 +10,18 @@ interface ProductItemProps {
 }
 
 function ProductItem({ product }: ProductItemProps) {
-  const { addToCart } = useContext(AppContext);
+  const { addToCart, state, removeFromCart } = useContext(AppContext);
 
-  const handleClick = (item: Product) => {
-    addToCart(item);
+  const isProductInCart = () => {
+    return state.cart.some((item: Product) => item.id === product.id);
+  };
+
+  const handleClick = () => {
+    if (isProductInCart()) {
+      removeFromCart(product);
+    } else {
+      addToCart(product);
+    }
   };
 
   return (
@@ -33,8 +41,9 @@ function ProductItem({ product }: ProductItemProps) {
         <button
           type='button'
           onClick={() => {
-            handleClick(product);
+            handleClick();
           }}
+          className={isProductInCart() ? 'selected' : ''}
         >
           <FontAwesomeIcon
             icon={faCartFlatbedSuitcase}

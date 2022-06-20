@@ -24,6 +24,7 @@ function MyOrder() {
       <div className='title-container'>
         <FontAwesomeIcon
           icon={faArrowLeft}
+          style={{ cursor: 'pointer' }}
           onClick={() => {
             setToggleOrders(false);
           }}

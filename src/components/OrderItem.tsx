@@ -15,7 +15,7 @@ function OrderItem({ order }: OrderItemProps) {
   return (
     <div className='order-item'>
       <figure>
-        <img src={order?.images[0]} alt={order?.title} />
+        <img src={order?.images[1]} alt={order?.title} />
       </figure>
       <p>{order?.title}</p>
       <p>{order?.price}</p>

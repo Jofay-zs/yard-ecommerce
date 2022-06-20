@@ -9,14 +9,15 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import navbarLogo from '../assets/menu.png';
-import Menu from './Menu';
 import AppContext from '../context/AppContext';
+import Menu from './Menu';
 import MyOrder from '../containers/MyOrder';
 import ResponsiveNavbar from './ResponsiveNavbar';
 
 function Header() {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
-  const [isAccountNavbarOpen, setIsAccountNavbarOpen] = useState(false);
+  const { isAccountNavbarOpen, setIsAccountNavbarOpen } =
+    useContext(AppContext);
   const { toggleOrders, setToggleOrders } = useContext(AppContext);
   const { state } = useContext(AppContext);
 
