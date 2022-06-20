@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Product } from "../lib/dataTypes/product";
+import { useState } from 'react';
+import { Product } from '../lib/dataTypes/product';
 
 const initialState = {
   cart: <Product[]>[],

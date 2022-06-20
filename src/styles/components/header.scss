@@ -90,6 +90,12 @@
 .navbar-shopping-cart {
     position: relative;
     font-size: 1.7em;
+    
+    & button {
+        background-color: transparent;
+        border: none;
+        font-size: 1em;
+    }
 
     & div {
         width: 16px;
@@ -99,8 +105,8 @@
         font-size: var(--sm);
         font-weight: bold;
         position: absolute;
-        top: -6px;
-        right: -3px;
+        top: -4px;
+        right: -1px;
         display: flex;
         justify-content: center;
         align-items: center;

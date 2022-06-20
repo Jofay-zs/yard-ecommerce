@@ -1,53 +1,53 @@
-import React from "react";
+import React from 'react';
 
-const Register = () => {
+function Register() {
   return (
-    <div className="login">
-      <div className="form-container">
-        <h1 className="title">My account</h1>
+    <div className='login'>
+      <div className='form-container'>
+        <h1 className='title'>My account</h1>
 
-        <form action="/" className="form">
+        <form action='/' className='form'>
           <div>
-            <label htmlFor="name" className="label">
+            <label htmlFor='name' className='label'>
               Name
+              <input
+                type='text'
+                id='name'
+                placeholder='Teff'
+                className='input input-name'
+              />
             </label>
-            <input
-              type="text"
-              id="name"
-              placeholder="Teff"
-              className="input input-name"
-            />
 
-            <label htmlFor="email" className="label">
+            <label htmlFor='email' className='label'>
               Email
+              <input
+                type='text'
+                id='email'
+                placeholder='platzi@example.com'
+                className='input input-email'
+              />
             </label>
-            <input
-              type="text"
-              id="email"
-              placeholder="platzi@example.com"
-              className="input input-email"
-            />
 
-            <label htmlFor="password" className="label">
+            <label htmlFor='password' className='label'>
               Password
+              <input
+                type='password'
+                id='password'
+                placeholder='*********'
+                className='input input-password'
+              />
             </label>
-            <input
-              type="password"
-              id="password"
-              placeholder="*********"
-              className="input input-password"
-            />
           </div>
 
           <input
-            type="submit"
-            value="Create"
-            className="primary-button login-button"
+            type='submit'
+            value='Create'
+            className='primary-button login-button'
           />
         </form>
       </div>
     </div>
   );
-};
+}
 
 export default Register;

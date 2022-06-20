@@ -30,7 +30,8 @@
     margin-top: 12px;
 }
 
-.product-info figure {
+.product-info button {
+    border: none;
     margin: 0;
     background-color: var(--hospital-green);
     padding: 8px;
@@ -39,10 +40,10 @@
     align-items: center;
     border-radius: 100%;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
-    width: 1.5em;
-    height: 1.5em;
+    width: 2.5em;
+    height: 2.5em;
 
-    .prduct-item-cart {
+    .product-item-cart {
         font-size: 1.3em;
         color: var(--white);
     }

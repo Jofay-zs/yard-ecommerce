@@ -1,14 +1,14 @@
-import React from "react";
-import OrderItem from "../components/OrderItem";
-import '../styles/pages/checkout.scss'
+import React from 'react';
+import OrderItem from '../components/OrderItem';
+import '../styles/pages/checkout.scss';
 
-const Checkout = () => {
+function Checkout() {
   return (
-    <div className="checkout">
-      <div className="checkout-container">
-        <h1 className="title">My order</h1>
-        <div className="checkout-content">
-          <div className="order">
+    <div className='checkout'>
+      <div className='checkout-container'>
+        <h1 className='title'>My order</h1>
+        <div className='checkout-content'>
+          <div className='order'>
             <p>
               <span>03.25.21</span>
               <span>6 articles</span>
@@ -20,6 +20,6 @@ const Checkout = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Checkout;
