@@ -18,12 +18,13 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
 
       # Install dependencies
-      -name: Install and build
+      - name: Install and build
         run: yarn install
 
       # Build project
-      -name: Compile project
+      - name: Compile project
         run: yarn build
