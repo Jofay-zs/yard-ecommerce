@@ -1,5 +1,4 @@
 import React from 'react';
-import OrderItem from '../components/OrderItem';
 import '../styles/pages/orders.scss';
 
 function Orders() {
@@ -8,7 +7,7 @@ function Orders() {
       <div className='orders-container'>
         <h1 className='title'>My orders</h1>
         <div className='orders-content'>
-          <OrderItem />
+          You must insert here and order item
         </div>
       </div>
     </div>

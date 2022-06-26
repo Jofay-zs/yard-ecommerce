@@ -1,5 +1,4 @@
 import React from 'react';
-import OrderItem from '../components/OrderItem';
 import '../styles/pages/checkout.scss';
 
 function Checkout() {
@@ -16,7 +15,7 @@ function Checkout() {
             <p>$560.00</p>
           </div>
         </div>
-        <OrderItem />
+        You must insert here an order item
       </div>
     </div>
   );
