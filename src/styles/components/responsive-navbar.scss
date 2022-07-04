@@ -1,3 +1,5 @@
+@import '../vars';
+
 .responsive-navbar {
     display: none;
     width: 100%;
@@ -6,14 +8,14 @@
     left: 0;
     top: 68px;
     background-color: white;
-    border: 1px solid var(--very-light-gray);
+    border: 1px solid $--very-light-gray;
     font-size: 18px;
 
     &-categories {
         margin-bottom: 2.5em;
 
         ul {
-            border-bottom: 1px solid var(--very-light-gray);
+            border-bottom: 1px solid $--very-light-gray;
         }
     }
 
@@ -36,7 +38,7 @@
 
         a {
             text-decoration: none;
-            color: var(--black);
+            color: $--black;
             font-weight: bold;
         }
     }

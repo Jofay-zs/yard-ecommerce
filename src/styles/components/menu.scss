@@ -8,7 +8,7 @@
     padding: 1em 1em 2em 2em;
     border-radius: 0 0 0.5em 0.5em;
     box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.4);
-    background-color: var(--white);
+    background-color: $--white;
 
     ul {
         list-style: none;
@@ -26,13 +26,13 @@
             }
 
             &:last-child {
-                border-top: 1px solid var(--very-light-gray);
+                border-top: 1px solid $--very-light-gray;
                 margin-top: 0.5em;
                 padding-top: 0.3em;
 
                 a {
-                    color: var(--hospital-green);
-                    font-size: var(--sm);
+                    color: $--hospital-green;
+                    font-size: $--sm;
                 }
             }
 

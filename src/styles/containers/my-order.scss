@@ -10,19 +10,19 @@
     background-color: white;
     top: 68px;
     border-radius: 0 0 6px 6px;
-    border: 1px solid var(--very-light-gray);
+    border: 1px solid $--very-light-gray;
 
     ::-webkit-scrollbar {
         width: 10px;
     }
 
     ::-webkit-scrollbar-thumb {
-        background: var(--very-light-gray);
+        background: $--very-light-gray;
         border-radius: 10px;
         height: auto;
 
         &:hover {
-            background: var(--hospital-green);
+            background: $--hospital-green;
         }
     }
 
@@ -39,7 +39,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: var(--hospital-green);
+            background-color: $--hospital-green;
             border-radius: 8px;
             border: none;
             width: 100%;
@@ -48,8 +48,8 @@
 
             a {
                 text-decoration: none;
-                color: var(--white);
-                font-size: var(--md);
+                color: $--white;
+                font-size: $--md;
                 font-weight: bold;
             }
         }
@@ -66,7 +66,7 @@
 }
 
 .title {
-    font-size: var(--lg);
+    font-size: $--lg;
     font-weight: bold;
 }
 
@@ -75,7 +75,7 @@
     grid-template-columns: auto 1fr;
     gap: 16px;
     align-items: center;
-    background-color: var(--text-input-field);
+    background-color: $--text-input-field;
     margin-bottom: 24px;
     border-radius: 8px;
     padding: 0 24px;
@@ -87,7 +87,7 @@
 }
 
 .order p span:nth-child(1) {
-    font-size: var(--md);
+    font-size: $--md;
     font-weight: bold;
 }
 

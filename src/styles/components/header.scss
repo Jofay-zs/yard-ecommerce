@@ -5,7 +5,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 24px;
-    border-bottom: 1px solid var(--very-light-gray);
+    border-bottom: 1px solid $--very-light-gray;
     position: sticky;
     top: 0;
     background: white;
@@ -25,7 +25,7 @@
     display: flex;
     cursor: pointer;
     text-decoration: none;
-    color: var(--black);
+    color: $--black;
 
 
     .navbar-header-logo {
@@ -37,7 +37,7 @@
         font-weight: bold;
 
         :first-child {
-            color: var(--hospital-green);
+            color: $--hospital-green;
         }
     }
 }
@@ -58,14 +58,14 @@
 
 .navbar-list li a {
     text-decoration: none;
-    color: var(--black);
-    border: 1px solid var(--white);
+    color: $--black;
+    border: 1px solid $--white;
     padding: 8px;
     border-radius: 8px;
 
     &:hover {
-        border: 1px solid var(--hospital-green);
-        color: var(--hospital-green);
+        border: 1px solid $--hospital-green;
+        color: $--hospital-green;
     }
 }
 
@@ -82,11 +82,11 @@
         cursor: pointer;
         background-color: transparent;
         border: none;
-        color: var(--very-light-gray);
-        font-size: var(--sm);
+        color: $--very-light-gray;
+        font-size: $--sm;
 
         &:hover {
-            color: var(--hospital-green);
+            color: $--hospital-green;
         }
     }
 }
@@ -94,7 +94,7 @@
 .navbar-shopping-cart {
     position: relative;
     font-size: 1.7em;
-    
+
     & button {
         background-color: transparent;
         border: none;
@@ -104,9 +104,9 @@
     & div {
         width: 16px;
         height: 16px;
-        background-color: var(--hospital-green);
+        background-color: $--hospital-green;
         border-radius: 50%;
-        font-size: var(--sm);
+        font-size: $--sm;
         font-weight: bold;
         position: absolute;
         top: -4px;

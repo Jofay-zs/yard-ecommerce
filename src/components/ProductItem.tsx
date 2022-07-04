@@ -1,7 +1,10 @@
 import React, { useContext } from 'react';
 import '../styles/components/product-item.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCartFlatbedSuitcase } from '@fortawesome/free-solid-svg-icons';
+import {
+  faCartFlatbedSuitcase,
+  faCheck,
+} from '@fortawesome/free-solid-svg-icons';
 import { Product } from '../lib/dataTypes/product';
 import AppContext from '../context/AppContext';
 
@@ -36,7 +39,7 @@ function ProductItem({ product }: ProductItemProps) {
       <div className='product-info'>
         <div>
           <p>{product?.price}</p>
-          <p>{product?.title}</p>
+          <p className='product-title'>{product?.title}</p>
         </div>
         <button
           type='button'
@@ -45,10 +48,14 @@ function ProductItem({ product }: ProductItemProps) {
           }}
           className={isProductInCart() ? 'selected' : ''}
         >
-          <FontAwesomeIcon
-            icon={faCartFlatbedSuitcase}
-            className='product-item-cart'
-          />
+          {isProductInCart() ? (
+            <FontAwesomeIcon icon={faCheck} className='product-item-cart' />
+          ) : (
+            <FontAwesomeIcon
+              icon={faCartFlatbedSuitcase}
+              className='product-item-cart'
+            />
+          )}
         </button>
       </div>
     </div>

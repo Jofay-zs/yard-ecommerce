@@ -20,10 +20,10 @@
 }
 
 .shopping-cart-item p:nth-child(2) {
-    color: var(--very-light-gray);
+    color: $--very-light-gray;
 }
 
 .shopping-cart-item p:nth-child(3) {
-    font-size: var(--md);
+    font-size: $--md;
     font-weight: bold;
 }
