@@ -56,12 +56,15 @@
     }
 }
 
-.navbar-list li a {
+.navbar-list li button {
     text-decoration: none;
     color: $--black;
     border: 1px solid $--white;
     padding: 8px;
     border-radius: 8px;
+    font-weight: bold;
+    background-color: transparent;
+    cursor: pointer;
 
     &:hover {
         border: 1px solid $--hospital-green;
@@ -99,6 +102,7 @@
         background-color: transparent;
         border: none;
         font-size: 1em;
+        cursor: pointer;
     }
 
     & div {

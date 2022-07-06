@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/components/header.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -7,7 +8,6 @@ import {
   faCaretDown,
   faPlus,
 } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
 import navbarLogo from '../assets/menu.png';
 import AppContext from '../context/AppContext';
 import Menu from './Menu';
@@ -18,7 +18,8 @@ function Header() {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
   const { isAccountNavbarOpen, setIsAccountNavbarOpen } =
     useContext(AppContext);
-  const { toggleOrders, setToggleOrders } = useContext(AppContext);
+  const { toggleOrders, setToggleOrders, setProductFilter } =
+    useContext(AppContext);
   const { state } = useContext(AppContext);
 
   return (
@@ -32,33 +33,75 @@ function Header() {
         />
       </button>
 
-      <section className='navbar-header'>
+      <Link to='/' className='navbar-header'>
         <img src={navbarLogo} alt='YARD-Sale' className='navbar-header-logo' />
         <div className='navbar-header-title'>
           <span>YARD </span>
           <span> Sale</span>
         </div>
-      </section>
+      </Link>
 
       <section className='navbar-list'>
         <ul>
           <li>
-            <Link to='/'>All</Link>
+            <button
+              type='button'
+              onClick={() => {
+                setProductFilter('');
+              }}
+            >
+              All
+            </button>
           </li>
           <li>
-            <Link to='/'>Clothes</Link>
+            <button
+              type='button'
+              onClick={() => {
+                setProductFilter('clothes');
+              }}
+            >
+              Clothes
+            </button>
           </li>
           <li>
-            <Link to='/'>Electronics</Link>
+            <button
+              type='button'
+              onClick={() => {
+                setProductFilter('electronics');
+              }}
+            >
+              Electronics
+            </button>
           </li>
           <li>
-            <Link to='/'>Furnitures</Link>
+            <button
+              type='button'
+              onClick={() => {
+                setProductFilter('furniture');
+              }}
+            >
+              Furnitures
+            </button>
           </li>
           <li>
-            <Link to='/'>Toys</Link>
+            <button
+              type='button'
+              onClick={() => {
+                setProductFilter('shoes');
+              }}
+            >
+              Shoes
+            </button>
           </li>
           <li>
-            <Link to='/'>Others</Link>
+            <button
+              type='button'
+              onClick={() => {
+                setProductFilter('others');
+              }}
+            >
+              Others
+            </button>
           </li>
         </ul>
       </section>
