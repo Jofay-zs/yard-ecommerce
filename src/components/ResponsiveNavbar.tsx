@@ -1,43 +1,116 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import AppContext from '../context/AppContext';
 import '../styles/components/responsive-navbar.scss';
 
 function ResponsiveNavbar() {
+  const { setProductFilter, setIsNavbarOpen } = useContext(AppContext);
   return (
     <nav className='responsive-navbar'>
       <div className='responsive-navbar-categories'>
         <h4>CATEGORIES</h4>
-        <ul>
-          <li>
-            <Link to='/'>All</Link>
-          </li>
-          <li>
-            <Link to='/'>Clothes</Link>
-          </li>
-          <li>
-            <Link to='/'>Electronics</Link>
-          </li>
-          <li>
-            <Link to='/'>Furnitures</Link>
-          </li>
-          <li>
-            <Link to='/'>Toys</Link>
-          </li>
-          <li>
-            <Link to='/'>Others</Link>
-          </li>
-        </ul>
+        <Link to='/'>
+          <ul>
+            <li>
+              <button
+                type='button'
+                onClick={() => {
+                  setProductFilter('');
+                  setIsNavbarOpen(false);
+                }}
+              >
+                All
+              </button>
+            </li>
+            <li>
+              <button
+                type='button'
+                onClick={() => {
+                  setProductFilter('clothes');
+                  setIsNavbarOpen(false);
+                }}
+              >
+                Clothes
+              </button>
+            </li>
+            <li>
+              <button
+                type='button'
+                onClick={() => {
+                  setProductFilter('electronics');
+                  setIsNavbarOpen(false);
+                }}
+              >
+                Electronics
+              </button>
+            </li>
+            <li>
+              <button
+                type='button'
+                onClick={() => {
+                  setProductFilter('furniture');
+                  setIsNavbarOpen(false);
+                }}
+              >
+                Furnitures
+              </button>
+            </li>
+            <li>
+              <button
+                type='button'
+                onClick={() => {
+                  setProductFilter('shoes');
+                  setIsNavbarOpen(false);
+                }}
+              >
+                Shoes
+              </button>
+            </li>
+            <li>
+              <button
+                type='button'
+                onClick={() => {
+                  setProductFilter('others');
+                  setIsNavbarOpen(false);
+                }}
+              >
+                Others
+              </button>
+            </li>
+          </ul>
+        </Link>
       </div>
       <div className='responsive-navbar-account'>
         <ul>
           <li>
-            <a href='/'>My orders</a>
+            <Link
+              to='/orders'
+              onClick={() => {
+                setIsNavbarOpen(false);
+              }}
+            >
+              My orders
+            </Link>
           </li>
           <li>
-            <a href='/'>My account</a>
+            <Link
+              to='/account'
+              onClick={() => {
+                setIsNavbarOpen(false);
+              }}
+            >
+              My account
+            </Link>
           </li>
           <li>
-            <a href='/'>Sign out</a>
+            <Link
+              to='/'
+              onClick={() => {
+                setIsNavbarOpen(false);
+              }}
+            >
+              Sign out
+            </Link>
           </li>
         </ul>
       </div>

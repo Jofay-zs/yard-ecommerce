@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/pages/send-email.scss';
 
 function SendEmail() {
@@ -14,7 +15,7 @@ function SendEmail() {
           <img src='./icons/email.svg' alt='email' />
         </div>
         <button type='button' className='primary-button login-button'>
-          Login
+          <Link to='/login'>Login</Link>
         </button>
         <p className='resend'>
           <span>Didn&apos;t receive the email?</span>

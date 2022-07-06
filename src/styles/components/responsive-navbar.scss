@@ -24,6 +24,26 @@
         padding: 0 2em 0 2em;
     }
 
+    &-account {
+        ul {
+            li {
+                font-weight: bold;
+
+                &:last-child {
+                    a {
+                        color: $--hospital-green;
+                    }
+                }
+
+                a {
+                    text-decoration: none;
+                    color: $--black;
+
+                }
+            }
+        }
+    }
+
     h4 {
         font-size: 19px;
     }
@@ -36,10 +56,14 @@
             margin: 1.5em 0 1.5em 0;
         }
 
-        a {
+        button {
             text-decoration: none;
             color: $--black;
             font-weight: bold;
+            background-color: transparent;
+            border: none;
+            font-size: 1em;
+            cursor: pointer;
         }
     }
 }

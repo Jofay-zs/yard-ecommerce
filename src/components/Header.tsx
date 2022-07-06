@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/components/header.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -15,9 +15,12 @@ import MyOrder from '../containers/MyOrder';
 import ResponsiveNavbar from './ResponsiveNavbar';
 
 function Header() {
-  const [isNavbarOpen, setIsNavbarOpen] = useState(false);
-  const { isAccountNavbarOpen, setIsAccountNavbarOpen } =
-    useContext(AppContext);
+  const {
+    isAccountNavbarOpen,
+    setIsAccountNavbarOpen,
+    isNavbarOpen,
+    setIsNavbarOpen,
+  } = useContext(AppContext);
   const { toggleOrders, setToggleOrders, setProductFilter } =
     useContext(AppContext);
   const { state } = useContext(AppContext);
@@ -41,7 +44,7 @@ function Header() {
         </div>
       </Link>
 
-      <section className='navbar-list'>
+      <Link to='/' className='navbar-list'>
         <ul>
           <li>
             <button
@@ -104,7 +107,7 @@ function Header() {
             </button>
           </li>
         </ul>
-      </section>
+      </Link>
 
       <section className='navbar-right'>
         <ul>

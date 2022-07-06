@@ -33,27 +33,6 @@
 
 
     }
-
-    &-content {
-        .primary-button {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: $--hospital-green;
-            border-radius: 8px;
-            border: none;
-            width: 100%;
-            cursor: pointer;
-            height: 50px;
-
-            a {
-                text-decoration: none;
-                color: $--white;
-                font-size: $--md;
-                font-weight: bold;
-            }
-        }
-    }
 }
 
 .title-container {

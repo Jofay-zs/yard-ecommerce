@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/containers/my-order.scss';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -43,9 +44,15 @@ function MyOrder() {
           </p>
           <p>${calculateTotalOrders()}</p>
         </div>
-        <button type='button' className='primary-button'>
+        <Link
+          to='/checkout'
+          className='primary-button'
+          onClick={() => {
+            setToggleOrders(false);
+          }}
+        >
           Checkout
-        </button>
+        </Link>
       </div>
     </aside>
   );
